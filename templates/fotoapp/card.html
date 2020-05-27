@@ -1,0 +1,12 @@
+
+<div class="card" style="width: 20rem;">
+    {% if instance.pack_fields %}
+        <img src="{{ instance.pack_fields.url }}" class="card-img-top" alt="...">
+    {% endif %}
+    <div class="card-body">
+        <h5 class="card-title" >{{ instance.nombre }}</h5>
+        <p class="card-text">{{ instance.descripcion }}</p>
+    </div>
+</div>
+
+

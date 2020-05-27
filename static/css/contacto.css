@@ -1,0 +1,264 @@
+#contacto {
+  width: 100%;
+  height: 150vh;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: -30px;
+  margin-bottom: -30px;
+  font: 200 40px 'Oswald', sans-serif;
+  letter-spacing: 6px;
+  color: rgb(100, 92, 92);
+  margin-bottom: 10px;
+}
+
+.contact-wrapper {
+  margin: 0 auto;
+  padding-top: 20px;
+  position: relative;
+  max-width: 800px;
+}
+
+/* Begin Left Contact Page */
+.form-horizontal {
+  float: left;
+  max-width: 400px;
+  font-family: 'Lato';
+  font-weight: 400;
+  
+}
+
+.form-control, textarea {
+  max-width: 400px;
+  letter-spacing: 1px;
+}
+
+
+.send-button {
+  display: block;
+  margin-left:  -16px;
+  margin-top: 15px;
+  height: 37px;
+  width: 200%;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.button { 
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 310 18px 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
+
+.button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 405px;
+  float: right;
+  margin-top: 5px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: rgb(146, 134, 134);
+}
+
+.contact-text {
+  font: 300 18px 'Lato', sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: rgb(134, 122, 122);
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: rgb(14, 13, 13);
+  text-decoration: none;
+}
+
+
+.copyright {
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* cambiar el color de la letra del placeholder*/
+textarea::-webkit-input-placeholder {
+  color: rgb(122, 116, 116) !important;
+  }
+   
+  textarea:-moz-placeholder { /* Firefox 18- */
+  color:  rgb(122, 116, 116) !important;  
+  }
+   
+  textarea::-moz-placeholder {  /* Firefox 19+ */
+  color:  rgb(122, 116, 116) !important;  
+  }
+   
+  textarea:-ms-input-placeholder {  
+  color:  rgb(122, 116, 116) !important;  
+  }
+
+input::-webkit-input-placeholder {
+  color:  rgb(122, 116, 116) !important;
+  }
+   
+
+  
+
+/* Begin Media Queries*/
+@media screen and (max-width: 760px) {
+    #contacto {
+    width: 100%;
+    height: 200vh;
+  }
+    #formu{
+      width: 100%; 
+  }
+  .direct-contact-container, .form-horizontal {
+    float: none;
+    margin: auto;
+  }  
+  .direct-contact-container {
+    margin-top: 100px;
+    max-width: 450px;
+  }    
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .send-button {
+    width: 100%;
+    
+  }
+}
+
+@media screen and (max-width: 569px) {
+  #contacto {
+    width: 100%;
+    height: 190vh;
+  }
+  .section-header{
+    font-size: 50px;
+  }
+  .direct-contact-container, .form-wrapper {
+    float: none;
+    margin:  0;
+  }  
+  .form-control, textarea {
+    max-width: 340px;
+    margin:  auto;
+  }
+  
+  .name, .email, textarea {
+    width: 280px;
+  } 
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 500px;
+  }  
+  .social-media-list {
+    left: 0;
+  }
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+  .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+  .send-button {
+    position: relative;
+    margin-left: 17px;
+    width: 85%;
+    
+  }
+  
+}
+@media screen and (max-width:550px) {
+  .contactame2{
+      position: relative;
+      top: 0px;
+  }
+}
+
+.form-group{
+  position: relative;
+  width: 200%;
+  right: 15px;
+   
+}
+
+.icono{
+width: 100%;
+height: 100%;
+}
+
+.formu{
+  display: none;
+}
+.form-group{
+  margin-bottom: 30px;
+  
+}
+
+.whatsapp{
+
+    height: 27px;
+    bottom: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+

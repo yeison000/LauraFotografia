@@ -1,0 +1,44 @@
+{% extends 'index.html'  %}
+{% load static %}
+{% block content %}
+{% autoescape off %}
+
+
+</br>
+<section>
+<hr class="hruno"> 
+    <p class="texto">Porque no todas las bodas son iguales pero sí cada una de ellas única y especial a continuación os presento maneras distintas de contar vuestra historia, creando así para vosotros la experiencia que más se adapte a la preciosa aventura que estáis a punto de vivir:</p>  
+<hr class="hrdos">
+</section>
+
+
+<section>
+<div class='container'>
+        <div class='row'>
+            {% for l in lista %}
+                <div class='col'>
+                    {% include 'fotoapp/card.html' with instance=l %}
+                </div>
+            {% endfor%}
+        </div>
+    </div>
+</section>
+
+
+<section>
+
+<div class="contactame">
+<div class="contactame2">
+    <h1 class="pregunta">¿Has elegido tu pack?</h1>
+    <h6 class="atendere">Te atendere en la mayor brevedad. Ponte en <a href="{% url 'fotoapp:contacto' %}">contacto</a> conmigo</h6>
+</div>
+</div>
+</section>
+
+
+
+{% endautoescape%}
+{% endblock  %}
+
+
+

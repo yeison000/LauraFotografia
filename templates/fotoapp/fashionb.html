@@ -1,0 +1,52 @@
+{% extends 'fotoapp/base.html'  %}
+{% load static %}
+{% block content %} 
+<section>
+	<div id="thumbGrid" >
+	
+	<H1>FASHION BEAUTY</H1>
+   
+
+<a href="ejemploFashion.html" class="tumb">
+    <img data-src="https://31.media.tumblr.com/1f4b6f2234572bbffe8cb3b889e7f756/tumblr_n8gxy7HNfy1st5lhmo1_1280.jpg" src="images/Fashion1.jpg"  alt="" /></a>
+
+<a href="ejemploFashion.html" class="tumb">
+    <img data-src="https://38.media.tumblr.com/7a940d6c469ca7ab1010d19fd509299b/tumblr_n8gxyxzzbN1st5lhmo1_1280.jpg" src="assets/images/Fashion1.jpg" alt="" /></a>
+
+<a href="ejemploFashion.html" class="tumb">
+    <img data-src="https://37.media.tumblr.com/88cbce9265c55a70a753beb0d6ecc2cd/tumblr_n8gxzn78qH1st5lhmo1_1280.jpg" src="assets/images/Fashion1.jpg"  alt="" /></a>
+
+<a href="ejemploFashion.html" class="tumb">
+    <img data-src="https://38.media.tumblr.com/ef74704fbfda8581ba130c573779f924/tumblr_n8gybzbUB61st5lhmo1_1280.jpg" src="assets/images/Fashion1.jpg"  alt="" /></a>
+
+<a href="ejemploFashion.html" class="tumb">
+    <img data-src="https://31.media.tumblr.com/d91942eddeeb832e44d7ac24196e0587/tumblr_n8gyrvGyzC1st5lhmo1_1280.jpg" src="assets/images/Fashion1.jpg"  alt="" /></a>
+
+
+<a href="ejemploFashion.html" class="tumb">
+    <img data-src="https://38.media.tumblr.com/602b98ac6bb0131b0e5720edeb925aa0/tumblr_n8gyt99PoN1st5lhmo1_1280.jpg"src="assets/images/Fashion1.jpg"  alt="" /></a>
+
+
+<a href="ejemploFashion.html" class="tumb">
+    <img data-src="https://38.media.tumblr.com/b4c26c6a82aafe7db9601801c5a571f9/tumblr_n8gyqdqA4E1st5lhmo1_1280.jpg" src="assets/images/Fashion1.jpg"  alt="" /></a>
+
+
+<a href="ejemploFashion.html" class="tumb">
+    <img data-src="https://31.media.tumblr.com/85969617dda79463cdd1780359e2379b/tumblr_n8gyuislNa1st5lhmo1_1280.jpg" src="assets/images/Fashion1.jpg"  alt="" /></a>
+    
+<a href="ejemploFashion.html" class="tumb">
+    <img data-src="https://31.media.tumblr.com/85969617dda79463cdd1780359e2379b/tumblr_n8gyuislNa1st5lhmo1_1280.jpg" src="assets/images/Fashion1.jpg"  alt="" /></a>
+</div>
+</section>
+
+
+<body>
+    {% for f in fashion %}
+    <tr>
+       
+        <td><img  src=" {{f.image.url}} "></td>
+    </tr>
+    {% endfor %}
+</body>
+
+{% endblock %} 

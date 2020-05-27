@@ -1,0 +1,102 @@
+{% extends 'fotoapp/base.html'  %}
+{% load static %}
+{% block content %}
+
+
+    <section class="friends-wishes">
+        <div class="container">
+            <div class="text-center">
+                <div class="col col-sm-12">
+    <input type="checkbox" id="cerrar">
+    <div class="modal">   
+        <div class="contenido">
+            <iframe class="myFrame"src="https://www.youtube.com/embed/vRQGts8whmQ?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <label for="cerrar" id="btn-cerrar">&nbsp;X</label>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+
+
+<!--video principal-->
+
+
+<div >
+<iframe class="video" src="https://www.youtube.com/embed/vRQGts8whmQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+<!--video principal-->
+<section class="friends-wishes">
+<div class="container">
+<div class="text-center">
+<div class="col col-sm-12">
+<h1 class="heading"><span>POST DESTACADOS</span></h1>
+</div>
+</div>
+<div class="col-md-12">
+
+    <div class="col-12 feedback-message">
+        <center><p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el
+             texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la 
+             imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+      </center> 
+    </div>
+</div>
+</div>
+</div>
+</section>
+<div class="custom-slider">
+{% for z in destacado %}
+    <div class="custom-box">
+        <div class="titulo"><p>{{ z.nombre }} </p> 
+            <a href="{% url 'fotoapp:collage' z.id %}"><img src=" {{z.albume_fields.url}} " class="img-fluid mx-auto d-block" alt="img1"></a>
+        </div><p> {{ z.fecha }} </p> 
+    </div> 
+{% endfor %}
+</div>
+
+
+<!-- Friends Wishes -->
+<div id="friend"></div>
+<section class="friends-wishes">
+    <div class="container">
+        <div class="text-center">
+            <div class="col col-sm-12">
+                <h1 class="heading"><span>THIS IS ME</span></h1>
+            </div>
+        </div>
+       
+            <div class="col-md-12">
+                <div class="col-12 col-sm-12">
+                        <center><img src="../static/images/laura.jpg" alt="" class="rounded-circle wow "></center>
+                </div>
+                    <div class="col-12 feedback-message">
+                        <br>
+                        <center><p>Mi nombre es Laura y soy fotógrafa y retocadora establecida en la capital de Madrid. Especialista en Moda y retrato, comienzo también mi camino en la fotografía emocional desde el 2016 dónde poco a poco cada día más personas han confiado en mí para contar sus historias más especiales.
+                            Para mí, la emoción en cada momento es algo muy importante en mi vida y por ende en mi trabajo dónde intento trasladar ése concepto todo lo posible. 
+                            Pienso que en la vida, vivimos conformados por emociones, experiencias, aprendizajes... En definitiva: RECUERDOS. Y éstos, a su vez, van conformando la persona que somos y queremos ser.
+                            En el retrato artístico, siempre lo he tenido muy claro, nunca lo he expresado en palabras pero si en imágenes... Esa intensidad del mensaje en los colores, la expresión que he querido materializar de la persona para convertirla en LA IMAGEN etc... Y como fluía dentro de mí tan natural, todo ello conformaba lo que sentía que debía crear.
+                            Pero como "una imagen vale más que mil palabras", te invito a conocer mi portafolio profesional y mi trabajo en esta página web y te agradezco enormemente tu interés en ello.</p>
+                        <h5>Laura Esteban Garrido</h5>
+                    <p>Photographer</p></center> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<div class="insta">
+<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+<iframe src="//lightwidget.com/widgets/c4ae2c89645e56ad98bf52af87178a09.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;;border:0;"></iframe>
+</div>
+    
+
+
+{% endblock %}    

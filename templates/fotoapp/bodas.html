@@ -1,0 +1,35 @@
+{% extends 'fotoapp/base.html'  %}
+{% load static %}
+{% block content %}
+
+
+<body>
+    
+<br>
+<section class="latest-blog">
+    <div class="container">
+        <div class="row text-center">
+            
+            {% for f in bodas %}
+            
+              <div class="col-12 col-md-4">
+                <div class="card">
+                    <div class="image-overlay"></div>
+                    <a href="{% url 'fotoapp:collage' f.id %}"><i class="fa fa-external-link fa-2x"></i></a>
+                    <img class="card-img-top" src="{{f.albume_fields.url}}" alt="Card image cap">
+                    <div class="card-body" >
+                        <p class="card-text">{{ f.comentario }}</p>
+                    </div>
+                </div>
+                <div class="text-overlay wow bounceIn">
+                    <p >{{ f.nombre }}<br>{{f.fecha}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+     </div>
+</section>   
+    
+    
+</body>
+{% endblock %} 

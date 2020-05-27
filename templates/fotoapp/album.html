@@ -1,0 +1,39 @@
+{% extends 'fotoapp/base.html'  %}
+{% load static %}
+{% block content %} 
+
+    <div class="container">
+        <div class="row text-center" id="centrado">
+<div class="cuadro">
+	<article class="fotos">
+   
+	{% for f in portfolio %}
+	   <figure>
+		<a href="{% url 'fotoapp:listaralbume' f.id %}"></a>
+			   <img src="{{ f.image.url  }}" alt="wedding">
+		   </a>
+		<a href="{% url 'fotoapp:listaralbume' f.id %}">
+			<figcaption>{{ f.nombre }}</figcaption>
+		   </a>
+	   </figure>
+	{% endfor %}
+
+	{% for z in portfolioimg %}
+	   <figure>
+		<a href="{% url 'fotoapp:listarsoloimg' z.id %}"></a>
+			   <img src="{{ z.image.url  }}">
+		   </a>
+		<a href="{% url 'fotoapp:listarsoloimg' z.id %}">
+			<figcaption>{{ z.nombre }}</figcaption>
+		   </a>
+	   </figure>
+	{% endfor %}
+	</article>
+</div>
+
+</div>
+</div>
+
+   
+
+{% endblock %} 

@@ -1,0 +1,50 @@
+{% extends 'fotoapp/base.html'  %}
+{% load static %}
+{% block content %}
+</br>
+
+<section id="contacto">
+    
+  <h1 class="section-header">Nos conocemos.</h1>
+  
+  <div class="contact-wrapper">
+    
+
+    <form class="form-horizontal" role="form" method="post">
+      {% csrf_token %}
+
+    {% for field in form.visible_fields %} 
+    <div id="formu" class="form-group">
+      <label class="formu" for="name">{{ form.label }}</label>
+      {{ field }}
+    </div>
+    {% endfor %}
+
+
+      <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+        <div class="button">
+          <i class="fa fa-paper-plane"><a href="https://api.whatsapp.com/send?phone=34602324590&text=hola,%20¿qué%20tal%20estás?">Mensaje</a></i><span class="send-text">Enviar</span>
+        </div>
+      </button>
+      
+    </form>
+        
+      <div class="direct-contact-container">
+        <ul class="contact-list">
+          <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Madrid | España | Underworld</span></i></li>          
+          <li class="list-item"><img class="whatsapp" src="{% static 'images/whatsapp.jpg' %}"></i><span class="contact-text phone"><a href="tel:+34-687-259-667" title="Give me a call">+34-687-259-667</a></span></i></li>
+          <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:laurafotografia16@gmail.com" title="Send me an email">laurafotografia16@hotmail.com</a></span></i></li>
+        </ul>
+        <div class="copyright">Gracias por contactarme</div>
+      </div>
+    
+  </div>
+  
+</section>
+{% endblock %}
+
+
+
+
+
+

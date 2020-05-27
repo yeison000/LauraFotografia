@@ -1,0 +1,39 @@
+{% extends 'fotoapp/base.html'  %}
+{% load static %}
+{% block content %} 
+
+
+
+<section class="latest-blog">
+    <div class="container">
+        <div class="row text-center">
+
+
+
+<div class="container page-top">
+
+
+
+            
+            <div class="gallery" id="gallery">
+              {% for f in soloimg %}
+           
+              <div class="mb-3 pics animation all 2">
+                <a href="{{ f.image.url }}"class="fancybox" rel="ligthbox"  data-fancybox-group="gallery">
+                <img class="img-fluid" src="{{ f.image.url }}" class="zoom img-fluid " alt="Card image cap" title="img.{{f.id}}">
+              </a>
+              </div>
+              {% endfor %}
+            </div>
+  
+  </div>
+
+
+
+</div>
+</div>
+</section>   
+
+
+{% endblock %} 
+
